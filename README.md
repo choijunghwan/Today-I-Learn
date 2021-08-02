@@ -1,6 +1,11 @@
 # Today-I-Learn
 <br><br>
 
+# Java
+* [자바 빈 프로퍼티 규약](Java/JavaBean.md)
+  
+<br>
+
 # Spring
 * [MVC1과 MVC2 차이](Spring/mvc1,2패턴.md)
 
