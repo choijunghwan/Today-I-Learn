@@ -1,10 +1,11 @@
 # Today-I-Learn
-<br><br>
+<br>
 
 # Java
 * [자바 빈 프로퍼티 규약](Java/JavaBean.md)
 * [JVM 메모리 구조](Java/JVM메모리구조.md)
 * [equals()와 hashCode()](Java/equals()메서드.md)
+* [Map 자료구조](Java/Map.md)
   
 <br>
 
@@ -19,8 +20,8 @@
 
 <br>
 
-# Markdown
-* 마크다운 문법  
-  - [Markdown 문법](/Markdown/Markdown_문법.md)
+# Git
+* [Markdown 문법](/Git/Markdown_문법.md)
+* [Merge 다양한 방법](/Git/Merge.md)
 
 <br>
