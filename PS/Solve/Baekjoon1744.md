@@ -1,5 +1,5 @@
 # 문제
-![1744](../../Img/Backjoon1744.PNG)
+![1744](/Img/Baekjoon1744.PNG)
 
 <br>
 

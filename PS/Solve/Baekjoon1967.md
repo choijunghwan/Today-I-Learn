@@ -1,5 +1,5 @@
 # 문제
-![문제](/Img/Backjoon1967.PNG)  
+![문제](/Img/Baekjoon1967.PNG)
 <br>
 
 # 예제
