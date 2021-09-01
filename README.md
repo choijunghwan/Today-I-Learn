@@ -23,6 +23,7 @@
 * [Markdown 문법](/Git/Markdown_문법.md)
 * [Merge 다양한 방법](/Git/Merge.md)
 * [Git password Authentication 에러](/Git/Token.md)
+* [Git flow 전략 vs Github flow 전략](/Git/Git-flow.md)
 
 <br>
 
