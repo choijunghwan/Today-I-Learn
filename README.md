@@ -16,7 +16,8 @@
 * [MVC1과 MVC2 차이](Spring/mvc1,2패턴.md)
 * [PRG POST/Redirect/GET](Spring/PRGpattern.md)
 * [Filter와 Interceptor 차이](Spring/Filter와Interceptor.md)
-* [Thymeleaf + Spring 기능]
+* [Thymeleaf 기능](Spring/Thymeleaf.md)
+* [Thymeleaf + Spring](Spring/Thymeleaf_Spring.md)
 
 <br>
 
