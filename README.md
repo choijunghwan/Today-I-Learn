@@ -16,6 +16,7 @@
 * [MVC1과 MVC2 차이](Spring/mvc1,2패턴.md)
 * [PRG POST/Redirect/GET](Spring/PRGpattern.md)
 * [Filter와 Interceptor 차이](Spring/Filter와Interceptor.md)
+* [Thymeleaf + Spring 기능]
 
 <br>
 
@@ -29,6 +30,12 @@
 
 # 후기
 * [AWS Builder 무신사](/후기/AWSBuilder무신사.md)
+
+<br>
+
+# Project
+* CharlieZip
+  * [#1. thymeleaf 기능 리팩토링]
 
 <br>
 
