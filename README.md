@@ -36,7 +36,7 @@
 
 # Project
 * CharlieZip
-  * [#1. thymeleaf 기능 리팩토링]
+  * [#1. thymeleaf 리팩토링](/Project/CharlieZip/thymeleaf_refactoring.md)
 
 <br>
 
