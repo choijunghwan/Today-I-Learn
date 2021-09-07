@@ -147,3 +147,85 @@ HTML로 웹 페이지를 만들다 보면 Head 부분에 많은 중복된 코드
 
 <br>
 
+# 3. 폼 객체 가져오기
+
+요구사항
+* 성별
+  * 남자, 여자
+  * 셀렉트 박스로 하나만 선택할 수 있다.
+  * 성별은 ENUM을 사용
+
+<br>
+
+**Gender - 성별**
+```Java
+import lombok.Getter;
+
+@Getter
+public enum  Gender {
+    MAN("남자"), FEMALE("여자");
+
+    private final String description;
+
+    Gender(String description) {
+        this.description = description;
+    }
+}
+```
+
+**form.html**
+```html
+<div class="box">
+    <select th:field="*{gender}" name="gender" id="gender" class="sel" aria-label="성별">
+    <option value="">성별</option>
+    <option th:each="sex : ${T(study.charlieZip.entity.Gender).values()}"
+    th:value="${sex}"
+    th:text="${sex}">
+    </option>
+    </select>
+    <span th:text="${valid_gender}"></span>
+</div>
+```
+기존에는 타임리프의 스프링EL 문법으로 ENUM을 직접 사용하도록 구현하였습니다.  
+컨트롤러에서 객체를 넘겨줄 필요가 없으니 조금 더 깔끔하다고 생각했었습니다.  
+
+<br>
+
+그러나 위의 코드는 안좋은 코드입니다.  
+먼저 ENUM의 패키지 위치가 변경되면 코드가 작동하지 않습니다. 코드가 유연하지 못한 특성이 있게됩니다. 그리고 엔티티에 직접적으로 의존하게 됩니다.
+
+또한 자바 컴파일러가 타임리프까지 컴파일 오류를 잡을 수 없어 프로그램을 실행하지 않고서는 오류를 알기가 어렵습니다.
+
+<br>
+
+그래서 컨트롤러에서 객체를 생성해 Model을 통해 넘겨주도록 변경하였습니다.
+
+**Controller**
+```Java
+@GetMapping(value = "/members/new")
+public String createForm(Model model) {
+    model.addAttribute("memberForm", new MemberForm());
+    Gender[] genders = Gender.values();
+    model.addAttribute("genders", genders);
+    return "members/addForm";
+}
+```
+`values()`를 사용하면 ENUM의 모든 정보를 배열로 반환합니다.
+`model.addAttribute("genders", genders);` 배열을 model을 통해 넘겨줍니다.
+
+<br>
+
+**form.html**
+```html
+<div class="box">
+    <select th:field="*{gender}" name="gender" id="gender" class="sel" aria-label="성별">
+        <option value="">성별</option>
+        <option th:each="sex : ${genders}"
+                th:value="${sex.name()}"
+                th:text="${sex.description}">
+        </option>
+    </select>
+    <span th:text="${valid_gender}"></span>
+</div>
+```
+
