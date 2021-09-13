@@ -18,6 +18,7 @@
 * [Filter와 Interceptor 차이](Spring/Filter와Interceptor.md)
 * [Thymeleaf 기능](Spring/Thymeleaf.md)
 * [Thymeleaf + Spring](Spring/Thymeleaf_Spring.md)
+* [검증 Validation](Spring/Validation.md)
 
 <br>
 
