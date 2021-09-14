@@ -38,6 +38,7 @@
 # Project
 * CharlieZip
   * [#1. thymeleaf 리팩토링](/Project/CharlieZip/thymeleaf_refactoring.md)
+  * [#2. Bean validation 리팩토링](/Project/CharlieZip/validation_refactoring.md)
 
 <br>
 
