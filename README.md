@@ -19,6 +19,7 @@
 * [Thymeleaf 기능](Spring/Thymeleaf.md)
 * [Thymeleaf + Spring](Spring/Thymeleaf_Spring.md)
 * [검증 Validation](Spring/Validation.md)
+* [Bean Validation 기능](Spring/Bean%20Validation%20기능.md)
 
 <br>
 
