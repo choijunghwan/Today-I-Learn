@@ -20,6 +20,7 @@
 * [Thymeleaf + Spring](Spring/Thymeleaf_Spring.md)
 * [검증 Validation](Spring/Validation.md)
 * [Bean Validation 기능](Spring/Bean%20Validation%20기능.md)
+* [Bean Validaion Custom Enum 검증](Spring/Bean%20Validation%20Custom%20Enum.md)
 
 <br>
 
