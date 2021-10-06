@@ -247,3 +247,103 @@ Student student = Student.builder()
 
 <br><br>
 
+# ModelMapper
+ModelMapper는 정확히는 객체 생성보다는 객체간의 변환을 위해 많이 사용하는 라이브러리라고 할 수 있습니다.
+
+<br>
+
+**ModelMapper 환경 설정**  
+**build.gradle**
+```
+implementation group: 'org.modelmapper', name: 'modelmapper', version: '2.3.9'
+```
+
+Student 객체를 StudentDto로 변환해보겠습니다.
+```Java
+@Getter
+@Builder
+public class Student {
+
+    private Long id;
+
+    private String name;
+
+    private Integer age;
+}
+```
+```Java
+@Getter
+@Builder
+public class StudentDto {
+
+    private Long id;
+
+    private String name;
+
+    private Integer age;
+}
+```
+(간단한 예시이므로 클래스레벨에서 빌더를 사용하겠습니다.)
+
+먼저 ModelMapper를 쓰지않고 변환하는 과정을 보겠습니다.
+```Java
+Student student = Student.builder()
+            .id(1L)
+            .name("학생A")
+            .age(10)
+            .build();
+
+// Student -> StudentDto
+StudentDto dto = StudentDto.builder()
+            .id(student.getId())
+            .name(student.getName())
+            .age(student.getAge())
+            .build();
+```
+기존의 빌더 방식은 모든 필드에 대해서 일일이 매핑을 진행하여야 합니다.
+
+위 방식은 코드의 양이 많은 단점이 있지만, 객체 변환을 위한 별도의 과정을 거치지 않기때문에 성능에 영향이 없습니다.
+또한 컴파일 단계에서 에러를 검출 할 수 있는 장점이 있습니다.
+
+이제 `ModelMapper`를 사용해서 변환해보겠습니다.
+```Java
+Student student = Student.builder()
+            .id(1L)
+            .name("학생A")
+            .age(10)
+            .build();
+
+ModelMapper modelMapper = new ModelMapper();
+StudentDto dto = modelMapper.map(student, StudentDto.class);
+```
+`ModelMapper`방식을 사용하니 코드가 간결해진걸 볼 수 있습니다.
+
+간결한 코드 작성이 가능해 졌습니다. 
+
+하지만 `ModelMapper`방식은 Reflection API라는 것을 사용하기 때문에 상대적으로 성능이 좋지 않고 컴파일 단계에서 에러가 검출 되지 않는 단점이 있습니다.
+
+<br><br>
+
+# 정리
+엔티티를 생성하는 4가지 방식에 대해 공부를 해보았습니다.
+
+4가지 방식 중에 딱 어느 하나의 방식을 사용하는게 좋겠다 싶은게 없고 상황에 따라 골고루 사용하면 좋을거 같습니다.
+
+* 생성자 방식 : 객체가 간단한경우
+* 정적 팩토리 메서드 : 의미를 부여하고 싶은 경우
+* 빌더 패턴 : 객체의 필드가 많고 복잡한 경우
+* ModelMapper : 객체간의 변환을 할 때 사용
+
+다만 `ModelMapper` 방식은 제가 찾아보며 공부했을 때 잘 생각해보고 사용해야겠다는걸 느꼈습니다.
+
+코드를 간결하게 작성할 수 있다는 어마무시한 장점이 있지만 컴파일 단계에서 오류를 잡을 수 없는 단점과 매핑해야 하는 모델이 복잡하면 오히려 빌더패턴보다 더 복잡할 수 있습니다.
+
+마지막으로 수천 TPS의 상황에서는 동시성 성능 이슈가 있다고 합니다.
+
+장단점을 잘 고려해서 빌더패턴과 ModelMapper를 선택해 사용하시면 될것 같습니다.
+
+<br>
+
+참고자료 : https://lob-dev.tistory.com/entry/%EA%B0%9D%EC%B2%B4-%EB%B3%80%ED%99%98%ED%95%98%EA%B8%B0-%EC%9E%90%EB%B0%94-%EC%BD%94%EB%93%9C-%EB%A7%A4%ED%95%91-vs-MapStruct-vs-ModelMapper
+
+https://hyoj.github.io/blog/java/basic/lombok/#noargsconstructor-requiredargsconstructor-allargsconstructor
