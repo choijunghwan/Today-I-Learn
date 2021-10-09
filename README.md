@@ -23,6 +23,7 @@
 * [Bean Validation 기능](Spring/Bean%20Validation%20기능.md)
 * [Bean Validaion Custom Enum 검증](Spring/Bean%20Validation%20Custom%20Enum.md)
 * [엔티티를 생성하는 방법](/Spring/Entity생성.md)
+* [Entity Listener](Spring/EntityListeners.md)
 
 <br>
 
