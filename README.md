@@ -6,7 +6,9 @@
 * [자바 빈 프로퍼티 규약](Java/JavaBean.md)
 * [JVM 메모리 구조](Java/JVM메모리구조.md)
 * [equals()와 hashCode()](Java/equals()메서드.md)
-* [Map 자료구조](Java/Map.md)
+* Java Collections Framework
+  * [자료구조의 분류](Java/자료구조분류.md)
+  * [Map 자료구조](Java/Map.md)
 * 디자인 패턴
   * [상태 패턴](Java/상태패턴.md)
   
