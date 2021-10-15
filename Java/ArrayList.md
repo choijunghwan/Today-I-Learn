@@ -678,3 +678,7 @@ public class ArrayList<E> implements List<E> {
     }
 }
 ```
+
+<br>
+
+참고자료 : https://st-lab.tistory.com/161?category=856997
