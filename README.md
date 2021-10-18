@@ -14,6 +14,7 @@
   * [Map 자료구조](Java/Map.md)
 * 알고리즘
   * [Selection sort(선택정렬)](Java/SelectionSort.md)
+  * [Insertion sort(삽입정렬)](Java/InsertionSort.md)
 * 디자인 패턴
   * [상태 패턴](Java/상태패턴.md)
   
