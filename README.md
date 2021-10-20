@@ -18,6 +18,7 @@
   * [Bubble sort(버블정렬)](Java/BubbleSort.md)
   * [Shell sort(셸정렬)](Java/ShellSort.md)
   * [Merge sort(합병정렬)](Java/MergeSort.md)
+  * [Quick sort(퀵정렬)](Java/QuickSort.md)
 * 디자인 패턴
   * [상태 패턴](Java/상태패턴.md)
   
