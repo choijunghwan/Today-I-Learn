@@ -243,3 +243,10 @@ public void builderSingular() {
 그러나 `Singular`의 경우 실제 객체를 생성할때 컬렉션의 값을 일일이 넣어주는 경우는 드물고 컬렉션 객체를 넘겨받아 넣어주기때문에 사용빈도가 적을것 같은 기능입니다.
 
 `Singular`를 사용하지 않으면 객체를 생성할때 `.jobs(Arrays.asList("직업1", "직업2"))` 와 같은 코드가 발생해 빌더 문법이 어설프고, 투박해 보이지만 훨씬 실용적인 방법인것 같습니다.
+
+<br>
+
+참고자료
+* https://www.baeldung.com/lombok-builder-singular
+* https://projectlombok.org/features/Builder
+* https://umbum.dev/1016

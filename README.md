@@ -21,6 +21,7 @@
   * [Quick sort(퀵정렬)](Java/QuickSort.md)
 * 디자인 패턴
   * [상태 패턴](Java/상태패턴.md)
+  * [전략 패턴](Java/전략패턴.md)
   
 <br>
 
