@@ -42,6 +42,12 @@
 
 <br>
 
+# DataBase
+* 그림으로공부하는 오라클 구조
+  * [I/O 와 디스크](/DB/Disk.md)
+
+<br>
+
 # Git
 * [Markdown 문법](/Git/Markdown_문법.md)
 * [Merge 다양한 방법](/Git/Merge.md)
