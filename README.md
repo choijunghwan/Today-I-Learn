@@ -44,7 +44,7 @@
 
 # DataBase
 * 그림으로공부하는 오라클 구조
-  * [I/O 와 디스크](/DB/Disk.md)
+  * [디스크와 프로세서](/DB/Disk.md)
 
 <br>
 
