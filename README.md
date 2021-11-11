@@ -49,6 +49,12 @@
 
 <br>
 
+# Infra
+* AWS
+  * [AWS EC2](/AWS/EC2.md)
+
+<br>
+
 # Git
 * [Markdown 문법](/Git/Markdown_문법.md)
 * [Merge 다양한 방법](/Git/Merge.md)
