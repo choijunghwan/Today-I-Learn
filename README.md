@@ -47,6 +47,7 @@
 # DataBase
 * 그림으로공부하는 오라클 구조
   * [디스크와 프로세서](/DB/Disk.md)
+  * [캐시와 공유메모리](/DB/Cache.md)
 
 <br>
 
@@ -75,6 +76,7 @@
   * [#2. Bean validation 리팩토링](/Project/CharlieZip/validation_refactoring.md)
   * [#3. 중복되는 로그인 체크 인터셉트로 구현](/Project/CharlieZip/Interceptor.md)
   * [#4. 패키지 구조 변경](/Project/CharlieZip/Directory.md)
+  * [#5. bindingResult 메시지 json 전송](/Project/CharlieZip/bindingResult.md)
 
 <br>
 
