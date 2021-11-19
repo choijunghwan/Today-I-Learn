@@ -54,6 +54,7 @@
 # Infra
 * AWS
   * [AWS EC2](/AWS/EC2.md)
+  * [AWS RDS](/AWS/RDS.md)
 
 <br>
 
