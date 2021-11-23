@@ -243,3 +243,7 @@ public ValidationResult handleBindException(BindException bindException, Locale 
 
 또한 타임리프를 사용할때는 당연하게 사용하던 기능이라 내부에서 MessageSource를 찾아주는 처리를 하는지 몰랐다. 앞으로는 기능을 당연하다고 사용하는 것이 아닌 내부에서 어떤 처리를 하는지 살펴보는 습관을 들여야겠다.
 
+<br>
+
+### 참고자료
+https://meetup.toast.com/posts/147
