@@ -51,6 +51,7 @@
   * [SQL문 분석과 공유풀](/DB/실행계획.md)
   * [오라클 데이터 구조](/DB/데이터구조.md)
   * [오라클의 대기와 Lock](/DB/Lock.md)
+  * [REDO와 UNDO](/DB/REDO.md)
 
 <br>
 
