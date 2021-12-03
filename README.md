@@ -52,6 +52,7 @@
   * [오라클 데이터 구조](/DB/데이터구조.md)
   * [오라클의 대기와 Lock](/DB/Lock.md)
   * [REDO와 UNDO](/DB/REDO.md)
+  * [오라클 다양한 상황 Q&A](/DB/simulation.md)
 
 <br>
 
