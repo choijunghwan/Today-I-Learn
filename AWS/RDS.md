@@ -199,3 +199,84 @@ Read Replica 인스턴스가 완전히 생성된 후 세부 내용을 살펴보�
 ![image14](/Img/RDS/RDS14.png)
 
 Read Replica 인스턴스는 마스터 DB와 동일한 데이터를 사용할 수 있지만 읽기 전용이어서 SELECT 문만 사용 가능합니다.
+
+<br><br>
+
+# RDS DB 사용하기(MySQL)
+
+MySQL Workbench Windows 버전을 기준으로 설명하겠습니다.
+
+![image15](/Img/RDS/RDS15.png)
+MySQL Connections 옆의 + 버튼을 클릭해줍니다.
+
+<br><br>
+
+![image16](/Img/RDS/RDS16.png)
+
+- Connection Name : 연결 이름을 정해줍니다.
+- Hostname : RDS에 접속하기 위해서는 RDS의 엔드포인트 주소를 입력해줘야 합니다. RDS의 엔트포인트 주소를 입력해줍니다.
+- Username : RDS DB 인스턴스르 생성할 때 설정했던 Username을 입력합니다. DB 인스턴스의 구성 부분에 들어가보면 Username을 확인할 수 있습니다.
+- Password : Password를 입력해줍니다.
+
+<br><br>
+
+![image17](/Img/RDS/RDS17.png)
+
+OK 버튼을 통해 생성을 완료한뒤 MySQL Workbench에서 RDS DB 인스턴스에 접속을 시도해봅니다.
+
+<br>
+
+![image18](/Img/RDS/RDS18.png)
+
+RDS DB 인스턴스가 생성되었는데 엔드포인트 주소로 접속이 안되는 오류가 발생합니다.
+
+이러한 오류가 발생하는 이유는 Security Group에서 접속이 차단되어 있기 때문입니다.
+
+DB 인스턴스를 생성할 때 Security Group을 기본값인 default(VPC)로 설정했습니다. default(VPC)는 모든 트래픽에 대해 Inbound가 열려있지만 접속 가능한 IP대역은 default 자기 자신으로 설정되어 있습니다. 즉 같은 default(VPC) Security Group 설정 안에서만 접속이 허용되므로 외부에서는 접속할 수 없습니다. 
+
+외부에서 엔드포인트 주소에 접속하려면 RDS DB 인스턴스(MySQL)전용 Security Group을 생성하고 MySQL 포트(3306)을 열어줘야 합니다.
+
+<br><br>
+
+RDS DB 인스턴스용 Security Group을 생성해보겠습니다.
+
+![image19](/Img/RDS/RDS19.png)
+
+먼저 EC2의 Security Group(보안 그룹)으로 화면을 이동해 Security Group을 생성합니다.
+
+<br><br>
+
+![image20](/Img/RDS/RDS20.png)
+
+- 보안 그룹 이름 : Security Group의 이름입니다.
+
+외부에서 들어오는 트래픽인 인바운드(Inbound)를 추가해줍니다.
+
+- 유형 : MySQL 포트를 열어줘야 하므로 MySQL을 선택합니다.
+- 소스 유형 : 접속가능한 IP 또는 IP 대역입니다. 여기서는 Anywhere을 선택하겠습니다.
+
+설정이 완료되면 생성해줍니다.
+
+<br>
+
+이제 다시 RDS DB 인스턴스 목록으로 이동합니다. 
+
+![image21](/Img/RDS/RDS21.png)
+
+DB 인스턴스를 선택한뒤 수정을 눌러줍니다.
+
+<br>
+
+![image22](/Img/RDS/RDS22.png)
+
+DB 인스턴스에 보안 그룹(Security Group)을 방금 생성한 보안 그룹으로 바꿔줍니다.
+
+<br>
+
+![image23](/Img/RDS/RDS23.png)
+
+이제 다시 MySQL Workbench로 돌아와서 접속해보면 접속이 되는걸 확인할 수 있습니다.
+
+<br>
+
+![image24](/Img/RDS/RDS24.png)
