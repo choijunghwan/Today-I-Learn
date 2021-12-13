@@ -61,6 +61,7 @@
   * [AWS EC2](/AWS/EC2.md)
   * [AWS RDS](/AWS/RDS.md)
   * [AWS S3](/AWS/S3.md)
+  * [AWS CDN](/AWS/CDN.md)
 
 <br>
 
